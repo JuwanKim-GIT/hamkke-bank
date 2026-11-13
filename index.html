@@ -70,6 +70,42 @@ body{background:#eaf0f7}.app{max-width:440px;background:#f8fafc;padding:0 19px 1
 .auth-explain{background:#fff;border:1px solid #e4eaf4;border-radius:22px;padding:22px;margin:25px 0}.auth-explain h2{font-size:23px}.auth-explain p{color:#6e7e92;line-height:1.7;font-size:14px}.auth-step{display:inline-block;background:#eaf2ff;color:#1665ce;border-radius:30px;padding:6px 12px;font-weight:800;font-size:13px}
 .card{background:#fff;color:#162b4a;border:1px solid #e6edf6;box-shadow:0 9px 25px #13376d0b}.card .sub{color:#788aa0}.card .mini{color:#1767df}.card .balance{color:#1767df}.account-row{background:white}.btn{box-shadow:0 6px 18px #135bd221}.nav{background:#fff!important}
 @media(max-width:360px){.balance-v7{font-size:27px}.account-actions-v7 button{font-size:15px}}
+</style><style id="v71-mobile-light-fix">
+/* Fixed light palette regardless of browser/system theme. */
+:root{color-scheme:light!important}
+html,body{background:#f3f7fc!important;color:#172b48!important}
+.app{background:#fff!important;color:#172b48!important}
+.top{background:#fff!important}
+.nav{background:#fff!important}
+button,input,select,textarea{color-scheme:light!important;font-family:inherit}
+.pin-key{background:#f2f6fc!important;color:#18375c!important;border-color:#d5e1f1!important}
+.pin-key:last-child{background:#e4eefb!important}
+.pin-slot{background:#fff!important;color:#135fcb!important;border-color:#bdcee4!important}
+.secure-field>label{color:#19385c!important}
+.transaction-button,.transaction-row,.account-summary,.date-group,.filter-trigger,.history-sheet{color:#172b48!important}
+.transaction-button{background:#fff!important}
+.date-group{background:#edf4fd!important;color:#526a89!important}
+.transaction-row{border-bottom:1px solid #e6edf6!important}
+.transaction-row .withdraw{color:#dc3e54!important}
+.transaction-row .deposit{color:#136fd0!important}
+.transaction-right small{color:#60758f!important}
+.history-sheet{background:#f7faff!important}
+/* Reduce PIN screen height while preserving comfortable touch targets. */
+.secure-field{margin:12px 0 8px!important}
+.secure-field>label{font-size:16px!important;margin-bottom:7px!important}
+.pin-slots{margin:7px auto 13px!important;gap:6px!important}
+.pin-slot{height:44px!important;width:min(42px,12vw)!important;border-radius:11px!important}
+.pin-keypad{gap:6px!important;max-width:360px!important}
+.pin-key{min-height:clamp(44px,6.3dvh,56px)!important;font-size:23px!important;border-radius:12px!important}
+.pin-guide{margin-top:9px!important;font-size:11px!important}
+.secure-field+.btn,.secure-field~.btn{margin-top:9px!important;padding:13px!important}
+@media(max-height:780px){
+ .top{height:58px!important}.heading{padding:8px 0!important}.heading h1{font-size:21px!important}
+ .eyebrow{margin-top:8px!important}.sub{line-height:1.45!important}
+ .secure-field{margin:6px 0!important}.pin-slots{margin:4px auto 9px!important}
+ .pin-slot{height:40px!important}.pin-key{min-height:44px!important}
+ .pin-guide{margin-top:5px!important}
+}
 </style></head><body><main class="app"><header class="top"><div class="brand"><span class="brand-icon">🏦</span> 함께은행</div><span class="tag">교육용 · 실제 거래 불가</span></header><div id="view"></div></main><nav id="nav" class="nav"></nav><script>
 'use strict';
 const KEY='practice-bank-demo-v70';const banks=[['KB국민','KB','#ffdc45','#5a4700'],['신한','신한','#dfeeff','#1754ae'],['하나','하나','#d8f5ed','#0b806c'],['우리','우리','#e1efff','#1167c4'],['NH농협','NH','#e7f4d6','#3f7829'],['IBK기업','IBK','#e0ecff','#1d5aa5'],['카카오뱅크','K','#ffe868','#302800'],['토스뱅크','T','#e3ecff','#2963e4'],['SC제일','SC','#e3f7ef','#16805b'],['케이뱅크','K','#e4edff','#2758bc'],['부산','BNK','#e7f1ff','#1e59a0'],['대구','iM','#e8edff','#374bc5'],['광주','광주','#ffe8e8','#b43535'],['전북','전북','#e6f5f0','#247960'],['경남','BNK','#e6f0ff','#2863a9'],['우체국','우','#ffebe6','#c64c2b'],['새마을금고','MG','#e7f4e9','#287f46'],['신협','신협','#e8efff','#2c62b0'],['수협','수협','#e1f1ff','#2473b8'],['함께은행','함께','#e5efff','#1758c6']];
